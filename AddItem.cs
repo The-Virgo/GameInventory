@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace GameInventory
 {
-    public partial class Form1 : Form
+    public partial class AddItem : Form
     {
-        public Form1()
+        public AddItem()
         {
             InitializeComponent();
-        }
-
-        private void storeBtn_Click(object sender, EventArgs e)
-        {
-            Store s = new Store();
-            s.Show();
         }
     }
 }
