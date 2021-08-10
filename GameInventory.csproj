@@ -67,6 +67,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameDb.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ItemContext.cs" />
     <Compile Include="Migrations\202108092336391_Initial.cs" />
