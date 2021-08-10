@@ -22,5 +22,23 @@ namespace GameInventory
             Store s = new Store();
             s.Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //Item i = new Item()
+            //{
+            //    ItemName = "Bronze Sword",
+            //    Effect = "Damage",
+            //    Value = 50,
+            //    Description = "A common and rusty weapon. " +
+            //        "It may not be the most powerfull, " +
+            //        "but it sure is reliable"
+            //};
+
+            //ItemContext dbContext = new ItemContext();
+            //dbContext.Items.Add(i);
+            //dbContext.SaveChanges();
+            //MessageBox.Show("Added");
+        }
     }
 }
