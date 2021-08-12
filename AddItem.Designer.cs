@@ -67,7 +67,6 @@ namespace GameInventory
             this.ItemValueTxtBx.Name = "ItemValueTxtBx";
             this.ItemValueTxtBx.Size = new System.Drawing.Size(100, 20);
             this.ItemValueTxtBx.TabIndex = 3;
-            this.ItemValueTxtBx.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // valueTxtBx
             // 

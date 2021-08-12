@@ -61,10 +61,5 @@ namespace GameInventory
 
             GameDb.Add(item); 
         }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
