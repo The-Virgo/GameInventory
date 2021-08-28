@@ -32,7 +32,7 @@ namespace GameInventory
             this.itemNameTxtBx = new System.Windows.Forms.TextBox();
             this.descTxtBx = new System.Windows.Forms.TextBox();
             this.effectTxtBx = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.ItemValueTxtBx = new System.Windows.Forms.TextBox();
             this.valueTxtBx = new System.Windows.Forms.Label();
             this.descriptionLbl = new System.Windows.Forms.Label();
             this.effectLbl = new System.Windows.Forms.Label();
@@ -61,12 +61,12 @@ namespace GameInventory
             this.effectTxtBx.Size = new System.Drawing.Size(100, 20);
             this.effectTxtBx.TabIndex = 2;
             // 
-            // textBox4
+            // ItemValueTxtBx
             // 
-            this.textBox4.Location = new System.Drawing.Point(135, 147);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
+            this.ItemValueTxtBx.Location = new System.Drawing.Point(135, 147);
+            this.ItemValueTxtBx.Name = "ItemValueTxtBx";
+            this.ItemValueTxtBx.Size = new System.Drawing.Size(100, 20);
+            this.ItemValueTxtBx.TabIndex = 3;
             // 
             // valueTxtBx
             // 
@@ -117,6 +117,7 @@ namespace GameInventory
             this.addItemConfirmBtn.TabIndex = 8;
             this.addItemConfirmBtn.Text = "Add";
             this.addItemConfirmBtn.UseVisualStyleBackColor = true;
+            this.addItemConfirmBtn.Click += new System.EventHandler(this.addItemConfirmBtn_Click);
             // 
             // AddItem
             // 
@@ -128,7 +129,7 @@ namespace GameInventory
             this.Controls.Add(this.effectLbl);
             this.Controls.Add(this.descriptionLbl);
             this.Controls.Add(this.valueTxtBx);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.ItemValueTxtBx);
             this.Controls.Add(this.effectTxtBx);
             this.Controls.Add(this.descTxtBx);
             this.Controls.Add(this.itemNameTxtBx);
@@ -144,7 +145,7 @@ namespace GameInventory
         private System.Windows.Forms.TextBox itemNameTxtBx;
         private System.Windows.Forms.TextBox descTxtBx;
         private System.Windows.Forms.TextBox effectTxtBx;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox ItemValueTxtBx;
         private System.Windows.Forms.Label valueTxtBx;
         private System.Windows.Forms.Label descriptionLbl;
         private System.Windows.Forms.Label effectLbl;
