@@ -15,7 +15,6 @@ namespace GameInventory
         public Store()
         {
             InitializeComponent();
-            
         }
 
         private void addItemBtn_Click(object sender, EventArgs e)
@@ -26,12 +25,41 @@ namespace GameInventory
 
         protected override void OnActivated(EventArgs e)
         {
-            List<Item> items = GameDb.GetAllItems();
-            storeLstBx.Items.Clear(); 
-            for (int i = 0; i < items.Count; i++)
+            Refresh();
+            setDataSource();
+        }
+
+        private void deleteItemBtn_Click(object sender, EventArgs e)
+        {
+            int toDelete = (int)storeLstBx.SelectedValue;
+
+            storeLstBx.DataSource = null;
+            setDataSource();
+            DialogResult confirmDelete = MessageBox.Show("Delete this item?",
+                                     "Confirm",
+                                     MessageBoxButtons.YesNo);
+            if (confirmDelete == DialogResult.Yes)
             {
-                storeLstBx.Items.Add(items[i].ItemName);
+               GameDb.Delete(toDelete);
+
+                storeLstBx.DataSource = null;
+                setDataSource();
             }
+            else
+            {
+                setDataSource();
+            }
+
+            
+        }
+
+        private void setDataSource()
+        {
+            List<Item> items = GameDb.GetAllItems();
+
+            storeLstBx.DataSource = items;
+            storeLstBx.DisplayMember = "ItemName";
+            storeLstBx.ValueMember = "ItemId";
         }
     }
 }
