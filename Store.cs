@@ -61,5 +61,12 @@ namespace GameInventory
             storeLstBx.DisplayMember = "ItemName";
             storeLstBx.ValueMember = "ItemId";
         }
+
+        private void editItemBtn_Click(object sender, EventArgs e)
+        {
+            int itemID = int.Parse(storeLstBx.SelectedValue.ToString());
+            EditItem editForm = new EditItem(itemID);
+            editForm.Show();
+        }
     }
 }

@@ -86,6 +86,7 @@ namespace GameInventory
             this.editItemBtn.TabIndex = 4;
             this.editItemBtn.Text = "Edit Item";
             this.editItemBtn.UseVisualStyleBackColor = true;
+            this.editItemBtn.Click += new System.EventHandler(this.editItemBtn_Click);
             // 
             // buyBtn
             // 

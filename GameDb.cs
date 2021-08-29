@@ -20,6 +20,17 @@ namespace GameInventory
             }
         }
 
+        public static Item GetItem(int id)
+        {
+            ItemContext context = new ItemContext();
+
+            Item i = (from item in context.Items
+            where item.ItemId == id
+            select item).Single();
+
+            return i;
+        }
+
         /// <summary>
         /// Adds an item to the database. Returns the item
         /// with the ItemId property populated
