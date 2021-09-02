@@ -17,14 +17,27 @@ namespace GameInventory
             InitializeComponent();
         }
 
+        public List<Item> inventory;
+
         private void storeBtn_Click(object sender, EventArgs e)
         {
             Store s = new Store();
             s.Show();
         }
 
+        protected override void OnActivated(EventArgs e)
+        {
+            Refresh();
+            PopulateInventory();
+        }
+
+        private void PopulateInventory()
+        {
+            inventoryLstBx.Items.Add(Store.invItemName);
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             //Item i = new Item()
             //{
             //    ItemName = "Bronze Sword",

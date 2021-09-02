@@ -97,6 +97,7 @@ namespace GameInventory
             this.buyBtn.TabIndex = 5;
             this.buyBtn.Text = "Buy";
             this.buyBtn.UseVisualStyleBackColor = true;
+            this.buyBtn.Click += new System.EventHandler(this.buyBtn_Click);
             // 
             // Store
             // 

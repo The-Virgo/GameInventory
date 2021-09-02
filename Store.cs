@@ -17,6 +17,7 @@ namespace GameInventory
             InitializeComponent();
         }
 
+        public static string invItemName = "";
         private void addItemBtn_Click(object sender, EventArgs e)
         {
             AddItem newItem = new AddItem();
@@ -67,6 +68,18 @@ namespace GameInventory
             int itemID = int.Parse(storeLstBx.SelectedValue.ToString());
             EditItem editForm = new EditItem(itemID);
             editForm.Show();
+        }
+
+        private void buyBtn_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(storeLstBx.SelectedValue.ToString(), out int id))
+            {
+                Item item = GameDb.GetItem(id);
+                invItemName = item.ItemName; 
+            }
+            Form1 form = new Form1();
+            form.Activate(); 
+
         }
     }
 }
